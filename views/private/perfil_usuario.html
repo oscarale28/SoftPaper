@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link id="estilos" rel="stylesheet" href="">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body class="perfil-usuario" oncontextmenu="return false">
+    <div class="wrapper">
+
+        <!-- PANTALLA DE CARGA DE LA PAGINA  -->
+        <div id="contenedor_carga">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- INICIA NAVBAR DE LA PAGINA -->
+        <header>
+            <nav class="navbar navbar-expand-lg " id="navbar-dashboard">
+                <div class="container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand nav-item" href="dashboard.html">
+                            <img src="../../resources/img/logo/logo-softpaper.png" alt=""
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Inventario
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                                    <li><a class="dropdown-item noadmin" href="subcategoria.html">Subcategorías</a></li>
+                                    <li><a class="dropdown-item noadmin" href="marca_proveedor.html">Proveedores y
+                                            marcas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Facturación
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="venta.html">Ventas</a></li>
+                                    <li><a class="dropdown-item noadmin" href="tipos.html">Tipo factura y venta</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Usuarios
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                                    <li><a class="dropdown-item noadmin" href="empleados.html">Empleados</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item noadmin" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Catálogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="estados.html">Estado de producto y venta</a></li>
+                                    <li><a class="dropdown-item" href="departamentos_municipios.html">Departamentos y
+                                            municipios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="color.html">Colores</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav-options d-flex">
+                            <a id="moon" class="nav-item" role="button">
+                                <i class=" " id="moosu"></i>
+                            </a>
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="" class="d-inline-block align-text-top user" id="avatar-user">
+                                </a>
+                                <ul class="dropdown-menu slideInNav1 slideInNav  animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="perfil_usuario.html">Ir a perfil</a></li>
+                                    <li><a class="dropdown-item" onclick="logOut()">Cerrar Sesión</a></li>
+                                </ul>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- FIN NAVBAR DE LA PAGINA -->
+
+        <main class="container-xxl">
+            <div class="header-content my-5">
+                <h1>Perfil Usuario</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="dashboard.html">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="perfil_usuario.html">Perfil
+                                Usuario</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- AVATAR -->
+            <div class="content content-perfil">
+                <div class="container content-card">
+                    <div class="row">
+                        <form class="col p-4 align-items-middle form-edit-profalie" id="profile-form"
+                            name="profile-form" autocomplete="off">
+                            <input name="id" id="id" class="d-none">
+                            <div class="row mt-5 ms-3">
+                                <div class="col col-12 col-xl-3 col-avatar">
+                                    <img id="avatar-info" class="avatar" src="" alt="">
+                                </div>
+                                <div class=" col-12 col-xl-9 mt-5">
+                                    <h2 id="nombre"></h2>
+                                    <div class="row pt-3">
+                                        <div class="col d-flex align-items-center justify-content-start">
+                                            <img class="d-blockimg" src="../../resources/img/perfil/user.png" alt="">
+                                            <div class="e-texto ms-3"><span id="cargo_empleado"></div>
+                                        </div>
+                                        <div class="col d-flex align-items-center justify-content-start">
+                                            <img class="d-blockimg" src="../../resources/img/perfil/email.png" alt="">
+                                            <div class="e-texto ms-3"><span id="correo_empleado"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row d-flex justify-content-between mt-5">
+                                        <div class="col d-flex align-items-center">
+                                            <h3 class="fw-bolder m-0 p-0">Detalles del Perfil</h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row mt-5 row-espacio-editar-perfil">
+                                <div class="col">
+                                    <div class="row row-md-3">
+                                        <div class="col-4 my-3 col-md-3 s-texto text-center">
+                                            <span>Nombre</span>
+                                        </div>
+                                        <div class="col-8 col-md-3 d-flex align-items-center">
+                                            <input type="text reset" name="nombre_emp" id="nombre_emp" class=" w-100 form-control 
+                                                form-control-lg form-control-solid" placeholder="Nombre" value=""
+                                                disabled>
+                                        </div>
+                                        <div class="col-4 my-3 col-md-3 s-texto text-center">
+                                            <span>Alias</span>
+                                        </div>
+                                        <div class="col-8 col-md-3 d-flex align-items-center">
+                                            <input type="text reset" name="alias_emp" id="alias_emp" class="w-100 form-control 
+                                                form-control-lg form-control-solid " placeholder="Apodo" value=""
+                                                disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row row-md-my-4">
+                                        <div class="col-4 my-3 col-md-3 s-texto text-center">
+                                            <span>Apellidos</span>
+                                        </div>
+                                        <div class="col-8 col-md-3 d-flex align-items-center">
+                                            <input type="text reset" name="apellido_emp" id="apellido_emp" class="w-100 form-control 
+                                                form-control-lg form-control-solid " placeholder="Apellido" value=""
+                                                disabled>
+                                        </div>
+                                        <div class="col-4 my-3 col-md-3 s-texto text-center">
+                                            <span>Avatar</span>
+                                        </div>
+                                        <div class="col-8 col-md-3 d-flex align-items-center">
+                                            <div class="text-center col-8">
+                                                <select class="form-select custom-form-select"
+                                                    aria-label="Default select example" id="foto" name="foto"
+                                                    onchange="changeAvatar()" disabled>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 my-3 col-md-3 s-texto text-center">
+                                            <span>Doble factor de autenticación</span>
+                                        </div>
+                                        <div class="col-8 col-md-3 d-flex align-items-center form-check form-switch justify-content-center">
+                                            <input class="form-check-input" type="checkbox" id="factor_autenticacion" checked disabled>
+                                            <input class="form-check-input input-hide" id="factor_autenticacion_value" name="factor_autenticacion_value">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-5 mx-3">
+                                <div class="col d-flex justify-content-end align-items-center ">
+                                    <button type="button" onclick="openChangePass()" class="btn-chpass input-hide btn-disabled me-3" id="btn-chpass"
+                                    data-bs-toggle="modal" data-bs-target="#modal-agregarCP" disabled>Cambiar contraseña</button>
+                                    <button type="button" onclick="cancelEdit()" class="btn-editar btn-second input-hide me-3"
+                                        id="btn-cancelar">Cancelar</button>
+                                    <button class="btn-editar btn-main input-hide"
+                                        type="submit" id="btn-guardar">Guardar</button>
+                                    <button type="button" onclick="openUpdate()" class="btn-editar btn-main" id="btn-editar">Editar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- DETALLES DEL PERFIL FIN-->
+        </main>
+        <!-- INICIO MODAL CAMBIAR CONTRASEÑA -->
+        <div class="modal fade" id="modal-agregarCP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-l">
+                <div class="modal-content d-flex justify-content-center">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h2 class="ps-3 pt-2">Cambiar contraseña</h2>
+                    </div>
+                    <form method="post" id="restaurar_contra" autocomplete="off">
+                        <div class="modal-body row d-flex justify-content-center pt-0">
+                            <div class="col-10 mt-1 R-inp text-center">
+                                <label for="cmb-precio">Contraseña nueva</label>
+                                <input class="form-control input-chpass" type="password" placeholder="Escriba su nueva contraseña"
+                                    aria-label=".form-control example" id="contra-new" name="contra-new" required>
+                            </div>
+                            <div class="col-10 mt-1 R-inp text-center">
+                                <label for="cmb-precio">Confirmar contraseña nueva</label>
+                                <input class="form-control input-chpass" type="password" placeholder="Reescriba su nueva contraseña"
+                                    aria-label=".form-control example" id="confirm-new" name="confirm-new" required>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-end">
+                                <button class="btn btn-guardar" type="submit">Guardar</button>
+                                <button class="btn btn-cancel" type="button" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- FIN MODAL CAMBIAR CONTRASEÑA -->
+        <footer class='footerSP'>
+            <div class="section">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center pt-3">
+                        <p class="footerH6">© SoftPaper. 2022 Derechos Reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="../../controllers/componentes.js"></script>
+    <script src="../../controllers/private/online.js"></script>
+    <script src="../../controllers/private/perfil.js"></script>
+    <script src="../../controllers/private/dark_mode.js"></script>
+    <script src="../../controllers/private/charge.js"></script>
+    <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+    <script src="../../controllers/private/preventinspect.js"></script>
+</body>
+
+</html>

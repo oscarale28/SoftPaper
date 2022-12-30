@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link id="estilos" rel="stylesheet" href="">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body oncontextmenu="return false">
+    <div class="wrapper">
+
+        <!-- PANTALLA DE CARGA DE LA PAGINA  -->
+        <div id="contenedor_carga">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- INICIA NAVBAR DE LA PAGINA -->
+        <header>
+            <nav class="navbar navbar-expand-lg " id="navbar-dashboard">
+                <div class="container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand nav-item" href="dashboard.html">
+                            <img src="../../resources/img/logo/logo-softpaper.png" alt=""
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Inventario
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                                    <li><a class="dropdown-item noadmin" href="subcategoria.html">Subcategorías</a></li>
+                                    <li><a class="dropdown-item noadmin" href="marca_proveedor.html">Proveedores y
+                                            marcas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Facturación
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="venta.html">Ventas</a></li>
+                                    <li><a class="dropdown-item noadmin" href="tipos.html">Tipo factura y venta</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Usuarios
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                                    <li><a class="dropdown-item noadmin" href="empleados.html">Empleados</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item cata-li noadmin" type="button">
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Catálogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="estados.html">Estado de producto y venta</a></li>
+                                    <li><a class="dropdown-item" href="departamentos_municipios.html">Departamentos y
+                                            municipios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="color.html">Colores</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav-options d-flex">
+                            <a id="moon" class="nav-item" role="button">
+                                <i class=" " id="moosu"></i>
+                            </a>
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="" class="d-inline-block align-text-top user" id="avatar-user">
+                                </a>
+                                <ul class="dropdown-menu slideInNav1 slideInNav  animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="perfil_usuario.html">Ir a perfil</a></li>
+                                    <li><a class="dropdown-item" onclick="logOut()">Cerrar Sesión</a></li>
+                                </ul>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- FIN NAVBAR DE LA PAGINA -->
+
+        <main class="container-xxl">
+            <div class="header-content">
+                <h1>Inicio</h1>
+            </div>
+            <div class="content content-dashboard">
+                <div class="row row-charts">
+                    <div class="col-lg-6 chart-dashboard mb-4 text-center p-2 align-items-center">
+                        <h5 class="mt-3">Inventario por proveedores</h5>
+                        <canvas class="w-100 h-auto" id="inventario-proveedor" width="800" height="450"></canvas>
+                        <div class="row">
+                            <div class="col-12 align-items-end my-3">
+                                <button class="btn-export btn-second py-2 px-4" type="button" onclick="selectProv()"
+                                    id="btn-reportP" data-bs-toggle="modal" data-bs-target="#modal-pro"><i
+                                        class="bi bi-box-arrow-up me-2"></i>Generar reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 chart-dashboard mb-4 text-center p-2 noadmin">
+                        <h5 class="mt-3" id="">Ingresos semanales</h5>
+                        <h5 class="stats-text mt-3" id="e-semana"></h5>
+                        <canvas class=" w-100 h-auto" id="chart4" width="900" height="450"></canvas>
+                        <div class="row">
+                            <div class="col-12 align-items-end my-3">
+                                <button class="btn-export btn-second py-2 px-4 mt-1" type="button" id="btn-reportV"
+                                    data-bs-toggle="modal" data-bs-target="#modal-vent"><i
+                                        class="bi bi-box-arrow-up me-2"></i>Generar reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 chart-dashboard mb-4 text-center p-2 align-items-center">
+                        <h5 class="mt-3">Productos vendidos semanalmente por categoría</h5>
+                        <h5 class="mt-3 stats-text" id="ventas-categoria-title"></h5>
+                        <canvas class="my-4 w-100 h-auto" id="ventas-categoria" width="900" height="350"></canvas>
+                        <div class="row">
+                            <div class="col-12 align-items-end mb-3">
+                                <button class="btn-export btn-second py-2 px-4" type="button" onclick="selectCategoria()"
+                                    id="btn-reportC" data-bs-toggle="modal" data-bs-target="#modal-cat"><i
+                                        class="bi bi-box-arrow-up me-2"></i>Generar reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 chart-dashboard mb-4 text-center p-2">
+                        <h5 class="mt-3">N° ventas del día por tipo de factura</h5>
+                        <h5 class="mt-3 stats-text" id="chart2-text"></h5>
+                        <canvas class="my-4 w-100 h-auto" id="chart2" width="900" height="300"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class='footerSP'>
+        <div class="section">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pt-3">
+                    <p class="footerH6">© SoftPaper. 2022 Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- INICIO MODAL PARA REPORTE MARCAS POR PROVEEDORES -->
+    <div class="modal modal-agregar fade" id="modal-pro" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <form method="post" id="agregar-pro">
+                    <div class="modal-header text-center justify-content-center">
+                        <h2 class="modal-title mt-0 fw-bold">Inventario por proveedores</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" id="prov-form">
+                            <div class="container">
+                                <div class="row agregar-content">
+                                    <div class="col-12 mt-3 mb-4 align-items-center">
+                                        <label for="cmb-proveedor">Proveedor</label>
+                                        <select class="form-select" aria-label="Default select example w-100"
+                                            id="proveedor" name="proveedor" required>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button class="btn btn-cancel btn-second" type="button"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-guardar" type="submit" id="btn-reporte1"
+                            form="save-form">Generar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN MODAL PARA REPORTE MARCAS POR PROVEEDORES -->
+
+    <!-- INICIO MODAL PARA REPORTE VENTAS SEMANALES -->
+    <div class="modal modal-agregar fade" id="modal-vent" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <form method="post" id="agregar-vent">
+                    <div class="modal-header text-center justify-content-center">
+                        <h2 class="modal-title mt-0 fw-bold">Ingresos semanales</h2>
+                    </div>
+                    <div class="modal-body my-3">
+                        <form method="post" id="ventas-form">
+                            <div class="container">
+                                <div class="row agregar-content">
+                                    <div class="col-12 text-center d-flex justify-content-center col-header-pre-table">
+                                        <label>Se mostrarán los 7 días anteriores hasta la fecha seleccionada.</label>
+                                    </div>
+                                    <div
+                                        class="col col-lg-12 col-sm-12 d-flex justify-content-center col-header-pre-table">
+                                        <input class="me-1 w-100" type="text" id="calendar-range"
+                                            placeholder="Rango de fechas">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button class="btn btn-cancel btn-second" type="button"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-guardar" type="submit" id="btn-reporteV"
+                            form="save-form">Generar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN MODAL PARA REPORTE VENTAS SEMANALES -->
+
+    <!-- INICIO MODAL PARA REPORTE VENTAS POR CATEGORÍA-->
+    <div class="modal modal-agregar fade" id="modal-cat" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <form method="post" id="agregar-pro">
+                    <div class="modal-header text-center justify-content-center">
+                        <h2 class="modal-title mt-0 fw-bold">Ventas por categoría</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" id="prov-form">
+                            <div class="container">
+                                <div class="row agregar-content">
+                                    <div class="col-12 mt-3 mb-4 align-items-center">
+                                        <label for="cmb-proveedor">Categoría</label>
+                                        <select class="form-select" aria-label="Default select example" id="categoria"
+                                            name="categoria" required>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button class="btn btn-cancel btn-second" type="button"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-guardar" type="submit" id="btn-reporte-categorias"
+                            form="save-form">Generar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <!-- DATE FLATPICKR  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/private/charge.js"></script>
+    <script src="../../controllers/componentes.js"></script>
+    <script src="../../controllers/private/dark_mode.js"></script>
+    <script src="../../controllers/private/online.js"></script>
+    <script src="../../controllers/private/dashboard.js"></script>
+    <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+    <script src="../../controllers/private/preventinspect.js"></script>
+</body>
+
+</html>

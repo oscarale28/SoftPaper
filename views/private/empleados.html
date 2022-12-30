@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link id="estilos" rel="stylesheet" href="">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body oncontextmenu="return false">
+    <div class="wrapper">
+
+        <!-- PANTALLA DE CARGA DE LA PAGINA  -->
+        <div id="contenedor_carga">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- INICIA NAVBAR DE LA PAGINA -->
+        <header>
+            <nav class="navbar navbar-expand-lg " id="navbar-dashboard">
+                <div class="container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand nav-item" href="dashboard.html">
+                            <img src="../../resources/img/logo/logo-softpaper.png" alt=""
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Inventario
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                                    <li><a class="dropdown-item" href="subcategoria.html">Subcategorías</a></li>
+                                    <li><a class="dropdown-item" href="marca_proveedor.html">Proveedores y
+                                            marcas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Facturación
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="venta.html">Ventas</a></li>
+                                    <li><a class="dropdown-item" href="tipos.html">Tipo factura y venta</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Usuarios
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                                    <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item  " type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Catálogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="estados.html">Estado de producto y venta</a></li>
+                                    <li><a class="dropdown-item" href="departamentos_municipios.html">Departamentos y
+                                            municipios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="color.html">Colores</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav-options d-flex">
+                            <a id="moon" class="nav-item" role="button">
+                                <i class=" " id="moosu"></i>
+                            </a>
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="" class="d-inline-block align-text-top user" id="avatar-user">
+                                </a>
+                                <ul class="dropdown-menu slideInNav1 slideInNav  animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="perfil_usuario.html">Ir a perfil</a></li>
+                                    <li><a class="dropdown-item" onclick="logOut()">Cerrar Sesión</a></li>
+                                </ul>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- FIN NAVBAR DE LA PAGINA -->
+
+        <!--INICIA MAIN-->
+        <main class="container-xxl">
+            <div class="container content">
+                <!--TÍTULO PÁGINA-->
+                <div class="header-content">
+                    <h1>Empleados</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="">Usuarios</a></li>
+                            <li class="breadcrumb-item"><a href="empleados.html">Empleados</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content content-productos  min-vh-100">
+                <div class="container content-card">
+                    <div class="row">
+                        <div class="col">
+
+                            <!-- CONTROLES CRUD -->
+                            <div class="row my-4">
+                                <div class="col col-lg-6 d-flex justify-content-start">
+
+                                    <!-- BUSCADOR-->
+                                    <div class="buscador ms-3">
+                                        <i class="bi bi-search px-2"></i>
+                                        <form class="d-none d-sm-inline-block me-auto" id="buscar-empleado-form"
+                                            name="buscar-empleado-form" method="post">
+                                            <input id="buscar-empleado-input" name="buscar-empleado-input"
+                                                class=" form-control form-control-lite barra-buscar" type="text"
+                                                placeholder="Buscar empleado">
+                                        </form>
+                                    </div>
+
+                                    <!-- REFRESCAR TABLA -->
+                                    <div>
+                                        <button class="btn-filtro btn-second" type="button" id="limpiar"><i
+                                                class="bi bi-arrow-clockwise"></i></button>
+                                    </div>
+
+                                    <!-- FILTROS -->
+                                    <div class="dropdown">
+                                        <form id="filter-form" method="post">
+                                            <ul class="dropdown-menu dropdown-menu-end animate slideIn dropdown-filtro"
+                                                aria-labelledby="dropdownMenuButtonFilter">
+                                                <li>
+                                                    <h5 class="mt-3">Opciones de filtro</h5>
+                                                </li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li>
+                                                    <h6 class="mb-3">Cargo</h6>
+                                                </li>
+                                                <li><select class="form-select filtro-combo"
+                                                        aria-label="Default select example" id="filter-cargo"
+                                                        name="filter-cargo">
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li>
+                                                    <h6 class="mb-3">Estado</h6>
+                                                </li>
+                                                <li><select class="form-select filtro-combo"
+                                                        aria-label="Default select example" id="filter-estado"
+                                                        name="filter-estado">
+                                                    </select>
+                                                </li>
+                                                <li class="d-flex justify-content-end"><button
+                                                        class="btn btn-main btn-aplicar-filtro mt-3" type="button"
+                                                        data-bs-target="#modal-agregar2" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal">Aplicar</button></li>
+                                            </ul>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                                <!-- AÑADIR REGISTRO Y EXPORTAR -->
+                                <div class="col col-lg-6 d-flex justify-content-end px-5">
+                                    <button onclick="openCreate()" class="btn-añadirMP" type="button"
+                                        data-bs-toggle="modal" data-bs-target="#modal-agregarEmpl"><i
+                                            class="bi bi-plus"></i>Añadir
+                                        empleado</button>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <div class="col">
+
+                                    <!-- TABLA -->
+                                    <div class="table-responsive mt-3 scroll" id="empleados-table">
+                                        <table class="table table-hover" id="table-empleados">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombres</th>
+                                                    <th>Apellidos</th>
+                                                    <th>Alias</th>
+                                                    <th>Correo</th>
+                                                    <th>Cargo</th>
+                                                    <th>Estado</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- tbody -->
+                                            <tbody id="tbody-rows">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- CHECKBOX TODOS LOS CAMPOS -->
+                            <div class="row mb-3">
+                                <div class="d-flex justify-content-center">
+                                    <label>Mostrar todos los campos
+                                        <input type="checkbox" id="checkTabla">
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--FIN MAIN-->
+
+        <!-- INICIA FOOTER -->
+        <footer class='footerSP'>
+            <div class="section">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center pt-3">
+                        <p class="footerH6">© SoftPaper. 2022 Derechos Reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN FOOTER -->
+
+    </div>
+
+    <!-- INICIO MODAL AGREGAR EMPLEADO -->
+    <div class="modal modal-agregarEmpl fade" id="modal-agregarEmpl" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-center justify-content-center">
+                    <h1 class="modal-title mt-0 fw-bold" id="modal-empleado-title"></h1>
+                </div>
+                <div class="modal-body">
+                    <form class="col" method="post" id="save-form-empleado" name="save-form-empleado"
+                        autocomplete="off">
+                        <div class="container">
+                            <div class="row agregar-content">
+                                <div class="col">
+                                    <div class="row">
+                                        <div
+                                            class="col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="text-center">
+                                                <label for="validationDefault02" class="form-label py-2">Elegir
+                                                    avatar</label>
+                                                <select class="form-select custom-form-select"
+                                                    aria-label="Default select example" id="foto" name="foto"
+                                                    onchange="changeAvatar()">
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="foto-empleado d-flex justify-content-center align-items-center mt-4">
+                                                <img id="imagen-avatar" src="" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-lg-8 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="row">
+                                                <div class="col-lg-6 mt-3">
+                                                    <label>Nombres</label>
+                                                    <input type="text" class="form-control Lcorreo" id="nombres"
+                                                        name="nombres" placeholder="Escribe tus nombres"
+                                                        aria-describedby="inputGroupPrepend2" required>
+                                                </div>
+                                                <div class="col-lg-6 mt-3">
+                                                    <label>Apellidos</label>
+                                                    <input type="text" class="form-control Lcorreo" id="apellidos"
+                                                        name="apellidos" placeholder="Escribe tus apellidos"
+                                                        aria-describedby="inputGroupPrepend2" required>
+                                                </div>
+                                                <div class="col-lg-6 mt-4">
+                                                    <label>Cargo</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        id="cargo" name="cargo" required>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6 mt-4">
+                                                    <label>Correo</label>
+                                                    <input type="email" class="form-control Lcorreo" id="correo"
+                                                        name="correo" placeholder="Escribe tu correo"
+                                                        aria-describedby="inputGroupPrepend2" required>
+                                                </div>
+                                                <div class="col-lg-12 mt-4">
+                                                    <label>Nombre de usuario</label>
+                                                    <input type="text" class="form-control Lcorreo" id="alias"
+                                                        name="alias" placeholder="Escribe tu usuario"
+                                                        aria-describedby="inputGroupPrepend2" required>
+                                                </div>
+                                                <div class="col-lg-12 mt-4 input-hide" id="col-estado-empleado">
+                                                    <label id="estado-label">Estado</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        id="estado-empleado" name="estado-empleado" required>
+                                                        <option value="1">Activo</option>
+                                                        <option value="0">Inactivo</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-12 mt-4">
+                                                    <label id="clave-label" for="clave">Contraseña</label>
+                                                    <input class="form-control" type="password" placeholder=""
+                                                        id="clave" name="clave" placeholder="Escribe tu contraseña"
+                                                        required aria-label=".form-control example">
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <label id="clave2-label" for="clave2">Confirmar contraseña</label>
+                                                    <input class="form-control" type="password" placeholder=""
+                                                        id="clave2" name="clave2" placeholder="Escribe tu contraseña"
+                                                        required aria-label=".form-control example">
+                                                </div>
+                                            </div>
+                                            <div class="col col-6 mt-3">
+                                                <input class="input-hide" type="text" id="id" name="id">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-end">
+                                    <button class="btn btn-guardar" type="submit">Guardar</button>
+                                    <button class="btn btn-cancel btn-second" type="button"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- FIN MODAL AGREGAR EMPLEADO -->
+
+
+    <!-- INICIO MODAL DELETE EMPLEADO -->
+    <div class="modal modal-eliminar fade" id="modal-eliminar" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col eliminar-content">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <h2>¿Estás seguro?</h2>
+                                <span>Esto podría afectar a los elementos dependientes del elemento seleccionado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex mx-2 justify-content-end">
+                    <form id="delete-form">
+                        <input type="hidden" id="uuid_empleado" name="uuid_empleado">
+                        <button class="btn btn-continuar" type="submit" data-bs-dismiss="modal">Continuar</button>
+                    </form>
+                    <button class="btn btn-cancel" type="button"
+                        data-bs-dismiss="modal">Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL DELETE EMPLEADO -->
+
+    <!-- INICIO MODAL REPORTE EMPLEADO-->
+    <div class="modal modal-reporteEmpl fade" id="modal-reporteEmpl" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-center justify-content-center">
+                    <h1 class="modal-title mt-0 fw-bold" id="modal-producto-title">Ventas por empleado</h1>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="container">
+                        <form class="row" method="post" id="stats-Empl">
+                            <div class="col-12 mt-3 d-flex justify-content-center col-header-pre-table">
+                                <input class="me-1" type="text" id="calendar-range" placeholder="Rango de fechas">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <h5 id="title-chart-1" class="mt-5 text-center title-report-stats"></h5>
+                                <canvas class="my-4 w-100 h-auto" id="chart1" width="900" height="300"></canvas>
+                            </div>
+                            <div class="col">
+                                <input class="input-hide" id="idr" name="idr">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-guardar" type="button" id="report-empl" name="report-empl">Reporte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL REPORTE EMPLEADO -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- DATATABLE JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+    <!-- DATE FLATPICKR  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/componentes.js"></script>
+    <script src="../../controllers/private/online.js"></script>
+    <script src="../../controllers/private/charge.js"></script>
+    <script src="../../controllers/private/empleados.js"></script>
+    <script src="../../controllers/private/dark_mode.js"></script>
+    <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+    <script src="../../controllers/private/preventinspect.js"></script>
+</body>
+
+</html>

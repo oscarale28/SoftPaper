@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link id="estilos" rel="stylesheet" href="">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body class="detalle-venta" oncontextmenu="return false">
+    <div class="wrapper">
+
+        <!-- PANTALLA DE CARGA DE LA PAGINA  -->
+        <div id="contenedor_carga">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- INICIA NAVBAR DE LA PAGINA -->
+        <header>
+            <nav class="navbar navbar-expand-lg " id="navbar-dashboard">
+                <div class="container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand nav-item" href="dashboard.html">
+                            <img src="../../resources/img/logo/logo-softpaper.png" alt=""
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Inventario
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                                    <li><a class="dropdown-item" href="subcategoria.html">Subcategorías</a></li>
+                                    <li><a class="dropdown-item" href="marca_proveedor.html">Proveedores y
+                                            marcas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Facturación
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="venta.html">Ventas</a></li>
+                                    <li><a class="dropdown-item" href="tipos.html">Tipo factura y venta</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Usuarios
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                                    <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item  " type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Catálogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="estados.html">Estado de producto y venta</a></li>
+                                    <li><a class="dropdown-item" href="subcategoria.html">Departamentos y municipios</a>
+                                    </li>
+                                    
+                                    <li><a class="dropdown-item" href="color.html">Colores</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav-options d-flex">
+                            <a id="moon" class="nav-item" role="button">
+                                <i class=" " id="moosu"></i>
+                            </a>
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt=""
+                                        class="d-inline-block align-text-top user" id="avatar-user">
+                                </a>
+                                <ul class="dropdown-menu slideInNav1 slideInNav  animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="perfil_usuario.html">Ir a perfil</a></li>
+                                    <li><a class="dropdown-item" onclick="logOut()">Cerrar sesión</a></li>
+                                </ul>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- FIN NAVBAR DE LA PAGINA -->
+
+        <!-- INICIO DEL CONTENIDO -->
+        <main class="container-xxl">
+            <div class="container content">
+                <div class="header-content p-0">
+                    <h1>Detalle de venta del día</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="">Facturación</a></li>
+                            <li class="breadcrumb-item"><a href="venta.html">Venta</a></li>
+                            <li class="breadcrumb-item"><a href="detalle_venta.html">Detalle de venta</a></li>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="content-detalle">
+                <!-- INICIO TARJETA SELECCIONAR PRODUCTOS -->
+                <div class="container content-card">
+                    <div class="row">
+                        <div class="col p-4">
+                            <div class="row">
+                                <div class="col mb-3 d-flex justify-content-start align-items-center">
+                                    <h2>Productos agregados: </h2>
+                                    <h2 id="added-products" class="ms-2"></h2>
+                                </div>
+                            </div>
+                            <!-- INICIO ESPACIO PARA PRODUCTOS-->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row row-cols-1 row-cols-lg-2 border border-dashed rounded pt-2 pb-2 mb-5 productos-detalle"
+                                        id="productos-detalle">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN ESPACIO PARA PRODUCTOS-->
+
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <h2>Seleccionar productos</h2>
+                                    <span>Añade productos a la venta</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-11 col-buscador">
+                                    <div class="buscador">
+                                        <i class="bi bi-search px-2"></i>
+                                        <form class="d-none d-sm-inline-block me-auto" method="post" id="search-form">
+                                            <input id="buscar-producto" name="buscar-producto"
+                                                class=" form-control form-control-lite barra-buscar " type="text"
+                                                placeholder="Buscar producto">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <!-- Recargar tabla -->
+                                    <button class="btn-filtro btn-second" type="button" id="limpiar"><i
+                                            class="bi bi-arrow-clockwise"></i></button>
+                                </div>
+                            </div>
+                            <!-- INICIO TABLA PRODUCTOS-->
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="table-responsive mt-3 scroll" id="no-more-tables">
+                                        <table class="table table-hover" id="table-productos">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Producto</th>
+                                                    <th>Stock</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody_rows"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN TABLA PRODUCTOS-->
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN TARJETA SELECCIONAR PRODUCTOS -->
+
+                <!-- INICIO TARJETA DETALLE-->
+                <div class="container content-card detalle d-flex">
+                    <form class="row" method="post" id="finalizar-venta">
+                        <div class="col-12 p-4 col-flex-detalle">
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <h2>Detalles de la venta</h2>
+                                </div>
+                            </div>
+                            <div class="row my-auto">
+                                <div class="col-12 col-md-6 factura-info">
+                                    <span>Correlativo</span>
+                                </div>
+                                <div class="col-12 col-md-6 text-end factura-info">
+                                    <input class="form-control input-correlativo" type="text" id="correlativo" name="correlativo">
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="row my-auto">
+                                <div class="col-12 col-md-6 factura-info">
+                                    <span>Subtotal</span>
+                                </div>
+                                <div class="col-12 col-md-6 text-end factura-info">
+                                    <h6 id="subtotal-detalle" name="subtotal-detalle">$0</h6>
+                                </div>
+                                <div class="col-12 col-md-6 factura-info">
+                                    <span>IVA</span>
+                                </div>
+                                <div class="col-12 col-md-6 text-end factura-info">
+                                    <h6 id="iva">$0</h6>
+                                </div>
+                            </div>
+                            <div class="row my-auto">
+                                <div class="col-12 col-md-6 factura-info">
+                                    <span>Total a pagar</span>
+                                </div>
+                                <div class="col-12 col-md-6 text-end factura-info">
+                                    <h4 id="total-venta">$0</h4>
+                                    <input type="hidden" id="monto" name="monto">
+                                </div>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col col-6"><button class="btn btn-cancel" type="button" id="cancelar-venta">Cancelar</button>
+                                </div>
+                                <div class="col col-6 d-flex justify-content-end"><button class="btn btn-guardar"
+                                        type="button" onclick="finishOrder()">Guardar</button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- FIN TARJETA DETALLE-->
+
+            </div>
+
+            <div class="modal modal-agregar fade" id="item-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center justify-content-center">
+                            <h1 class="modal-title mt-0 fw-bold" id="modal-add-venta-title">Añadir a la venta</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container p-3 mt-2">
+                                <form class="row" method="post" id="item-form" autocomplete="off">
+                                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                        <label for="">Color</label>
+                                        <select class="form-select mt-1 required" aria-label="Default select example" id="color"
+                                            name="color" required>
+                                        </select>
+                                    </div>
+
+                                    <div
+                                        class="col-lg-6 d-flex flex-column justify-content-center cantidad-agregar-detalle">
+                                        <label for="">Cantidad</label>
+                                        <div class="input-group mt-1">
+                                            <button onclick="restarStock()" class="btn btn-spinner-detalle"
+                                                type="button" id="res-btn">-</button>
+                                            <input onchange="validacionInputStock()"
+                                                onkeypress="return valideKey(event);" id="input-stock"
+                                                name="input-stock" type="number" min="0"
+                                                class="form-control text-center" placeholder=""
+                                                aria-label="Example text with button addon"
+                                                aria-describedby="button-addon1" value="1" required>
+                                            <button onclick="sumarStock()" class="btn btn-spinner-detalle" type="button"
+                                                id="sum-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex flex-column justify-content-center mt-4">
+                                        <label for="">Precio unitario</label>
+                                        <input class="form-control input-correlativo mt-1" type="number" id="precio" name="precio" step=".01" min="0.01">
+                                    </div>
+                                    <div class="col col-6 mt-3">
+                                        <input class="form-control input-hide" type="text" id="id" name="id">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="d-flex justify-content-end mt-2">
+                                <!-- Botón para enviar el formulario -->
+                                <button type="submit" form="item-form" class="btn btn-guardar">
+                                    Agregar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal modal-agregar fade" id="item-modal-update"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-l">
+                    <div class="modal-content">
+                        <div class="modal-header text-center justify-content-center">
+                            <h1 class="modal-title mt-0 fw-bold" id="modal-add-venta-title">Editar cantidad</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <form class="row" method="post" id="item-form-update" autocomplete="off">
+                                    <div class="col col-12 mt-4">
+                                        <!-- Campo oculto para asignar el id del registro al momento de modificar -->
+                                        <input type="hidden" id="idDetalle" name="idDetalle">
+                                        <input type="hidden" id="idColorStock" name="idColorStock">
+                                        <h5>Cantidad:</h5>
+                                    </div>
+                                    <div class="col col-12 d-flex justify-content-center mb-4">
+                                        <div class="input-group ">
+                                            <button onclick="restarStockUpdate()" class="btn btn-spinner-detalle"
+                                                type="button" id="res-btn">-</button>
+                                            <input onchange="validacionInputStockUpdate()"
+                                                onkeypress="return valideKey(event);" id="input-stock-update"
+                                                name="input-stock-update" type="number" min="0"
+                                                class="form-control text-center" placeholder=""
+                                                aria-label="Example text with button addon"
+                                                aria-describedby="button-addon1" value="1">
+                                            <button onclick="sumarStockUpdate()" class="btn btn-spinner-detalle" type="button"
+                                                id="sum-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 d-flex justify-content-center mb-3">
+                                        <!-- Botón para enviar el formulario -->
+                                        <button type="submit" class="btn btn-guardar" data-bs-dismiss="modal">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FIN DEL CONTENIDO -->
+
+        <!-- INICIO DEL FOOTER -->
+        <footer class='footerSP'>
+            <div class="section">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center pt-3">
+                        <p class="footerH6">© SoftPaper. 2022 Derechos Reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN DEL FOOTER -->
+
+
+        <!-- SCRIPTS BOOTSRAP-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- DATATABLE JS -->
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+
+        <!-- INPUT SPINNER (+ y - input)-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap-input-spinner@3.1.10/src/bootstrap-input-spinner.min.js"></script>
+
+        <!-- DATE FLATPICKR  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- SCRIPT PROPIO-->
+        <script src="../../controllers/componentes.js"></script>
+        <script src="../../controllers/private/charge.js"></script>
+        <script src="../../controllers/private/detalle_venta_dia.js"></script>
+        <script src="../../controllers/private/dark_mode.js"></script>
+        <script src="../../controllers/private/online.js"></script>
+        <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+        <script src="../../controllers/private/preventinspect.js"></script>
+</body>
+
+</html>

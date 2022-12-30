@@ -1,0 +1,81 @@
+# ----------------------------------------------------------------------
+# | Mensajes/páginas de error personalizados                                        |
+# ----------------------------------------------------------------------
+
+ErrorDocument 403 /SoftPaper/resources/error/403.html
+ErrorDocument 404 /SoftPaper/resources/error/404.html
+
+# ----------------------------------------------------------------------
+# | Codificación de caracteres                                                |
+# ----------------------------------------------------------------------
+
+# Sirve todos los recursos etiquetados como `text/html` o `text/plain`.
+# con el parámetro de tipo de medio `charset` establecido como `UTF-8`.
+#
+# https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+
+AddDefaultCharset utf-8
+
+# ----------------------------------------------------------------------
+# | Motor de reescritura                                                     |
+# ----------------------------------------------------------------------
+
+# (1) Encienda el motor de reescritura (esto es necesario para que
+#     las directivas `RewriteRule` funcionen).
+#
+# https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
+#
+# (2) Habilitar la opción `FollowSymLinks` si no lo está ya.
+#
+# https://httpd.apache.org/docs/current/mod/core.html#options
+#
+# (3) Si su proveedor de Internet no permite la opción `FollowSymlinks`,
+#     necesitas comentarla o eliminarla, y luego descomentar
+#     la línea `Options +SymLinksIfOwnerMatch` (4), pero tenga en cuenta
+#     del impacto en el rendimiento.
+#
+#     https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks
+#
+# (4) Algunos servicios de alojamiento en la nube le exigirán que establezca `RewriteBase`.
+#
+#     http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
+#
+# (5) Dependiendo de cómo esté configurado su servidor, puede que también necesite
+#     usar la directiva `RewriteOptions` para habilitar algunas opciones para
+#     el motor de reescritura.
+#
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions
+
+<IfModule mod_rewrite.c>
+
+    # (1)
+    RewriteEngine On
+
+    # (2)
+    Options +FollowSymlinks
+
+    # (3)
+    # Options +SymLinksIfOwnerMatch
+
+    # (4)
+    # RewriteBase /
+
+    # (5)
+    # RewriteOptions <options>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Acceso a archivos |
+# ----------------------------------------------------------------------
+
+# Bloquear el acceso a los directorios sin un documento por defecto.
+#
+# Debería dejar lo siguiente sin comentar, ya que no debería permitir
+# que cualquiera navegue por todos los directorios de su servidor (lo que puede
+# incluye lugares bastante privados como los directorios del CMS).
+
+<IfModule mod_autoindex.c>
+    Options All -Indexes
+</IfModule>

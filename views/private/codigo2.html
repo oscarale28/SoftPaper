@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+    <!-- ENLACES DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body oncontextmenu="return false">
+    <main class="login-fondo">
+        <!-- CONTENEDOR PRINCIPAL DE LA PAGINA -->
+        <div class="container-fluid ">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-sm-12 col-md-10 col-lg-7 d-flex justify-content-center align-items-center p-0 con-Re">
+                    <!-- CONTENEDOR IZQUIERDO DE LA PAGINA -->
+                    <div class="izquierdo-Re d-none d-sm-flex col-md-5 justify-content-center  align-items-center">
+                        <img src="../../resources/img/logo/logo-softpaper-blanco.png" class="log-l">
+                    </div>
+                    <!-- CONTENEDOR DERECHO DE LA PAGINA -->
+                    <div class="derecho-Re col-sm-7">
+                        <div class="container">
+                            <div class="row d-flex justify-content-center ">
+                                <h3 class="titu-l">CÓDIGO</h3>
+                                <div class="col-10 mx-auto mt-3 l-inp">
+                                    <p class="p-lo">Ingresa el código enviado a tu correo para poder resetear tu
+                                        contraseña</p>
+                                        <form method="post" id="verify_email2" autocomplete="off">
+                                            <div class="col-10 mx-auto mt-3 R-inp">
+                                                <label for="cmb-precio">Código</label>
+                                                <input class="form-control" type="text" min="0" placeholder="Escribe tu código"
+                                                    aria-label=".form-control example" id="codigo" name="codigo">
+                                            </div>
+                                            <div class="col-10 mx-auto mt-3 l-inp">
+                                                <button class="Aceptar btn-main">Continuar</button>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <div class="spinner-border text-primary mt-3 spinner-hide" role="status"
+                                                    id="spinner">
+                                                </div>
+                                            </div>
+                                        </form>  
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- SCRIP PRINCIPALES DE BOOSTRAP 5 Y DE LA PAGINA -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/componentes.js"></script>
+    <script src="../../controllers/private/codigo_contra2.js"></script>
+    <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+    <script src="../../controllers/private/preventinspect.js"></script>
+
+</body>
+
+</html>

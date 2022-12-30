@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link id="estilos" rel="stylesheet" href="">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" type="icon/png" href="../../resources/img/logo/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftPaper</title>
+</head>
+
+<!-- oncontextmenu: para inhabilitar el click derecho -->
+<body class="subcategoria" oncontextmenu="return false">
+    <div class="wrapper">
+
+        <!-- PANTALLA DE CARGA DE LA PAGINA  -->
+        <div id="contenedor_carga">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- INICIA NAVBAR DE LA PAGINA -->
+        <header>
+            <nav class="navbar navbar-expand-lg " id="navbar-dashboard">
+                <div class="container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand nav-item" href="dashboard.html">
+                            <img src="../../resources/img/logo/logo-softpaper.png" alt=""
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Inventario
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                                    <li><a class="dropdown-item" href="subcategoria.html">Subcategorías</a></li>
+                                    <li><a class="dropdown-item" href="marca_proveedor.html">Proveedores y
+                                            marcas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Facturación
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="venta.html">Ventas</a></li>
+                                    <li><a class="dropdown-item" href="tipos.html">Tipo factura y venta</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Usuarios
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="clientes.html">Clientes</a></li>
+                                    <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="active nav-item menu-item  " type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Catálogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-inventario slideInNav animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="estados.html">Estado de producto y venta</a></li>
+                                    <li><a class="dropdown-item" href="departamentos_municipios.html">Departamentos y
+                                            municipios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="color.html">Colores</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav-options d-flex">
+                            <a id="moon" class="nav-item" role="button">
+                                <i class=" " id="moosu"></i>
+                            </a>
+
+                            <li class="active nav-item menu-item" type="button">
+
+                                <a class="nav-link dropdown" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="" class="d-inline-block align-text-top user" id="avatar-user">
+                                </a>
+                                <ul class="dropdown-menu slideInNav1 slideInNav  animate"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="perfil_usuario.html">Ir a perfil</a></li>
+                                    <li><a class="dropdown-item" onclick="logOut()">Cerrar Sesión</a></li>
+                                </ul>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- FIN NAVBAR DE LA PAGINA -->
+
+        <main class="container-xxl">
+            <div class="container content">
+                <div class="header-content">
+                    <h1>Catálogo de colores</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="">Catálogo</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a href="color.html">Colores</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="content content-productos">
+                <div class="container content-card">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row mt-4">
+                                <div class="col col-lg-6 d-flex justify-content-start">
+
+                                    <!-- BUSCADOR -->
+                                    <div class="buscador">
+                                        <i class="bi bi-search px-2"></i>
+                                        <form method="post" id="buscar-color-form"
+                                            class="d-none d-sm-inline-block me-auto buscador2">
+                                            <input id="buscar-color-input" name="buscar-color-input"
+                                                class=" form-control form-control-lite barra-buscar" type="text"
+                                                placeholder="Buscar color">
+                                        </form>
+                                    </div>
+
+                                    <!-- REFRESCAR TABLA -->
+                                    <div>
+                                        <button class="btn-filtro btn-second" type="button" id="limpiar"><i
+                                                class="bi bi-arrow-clockwise"></i></button>
+                                    </div>
+
+                                </div>
+
+                                <!-- AÑADIR REGISTRO -->
+                                <div class="col col-lg-6 d-flex justify-content-end px-5">
+                                    <button class="btn-añadir  btn-main" onclick="openCreate()" type="button"
+                                        data-bs-toggle="modal" data-bs-target="#modal-agregarCo"><i
+                                            class="bi bi-plus"></i>Añadir
+                                        color</button>
+                                </div>
+
+                            </div>
+                            <!-- LISTA DE COLORES -->
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="table-responsive mb-3 scroll">
+                                        <table class="table table-hover" id="table-color">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Estado</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody-rows">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- INICIO FOOTER DE LA PAGINA -->
+        <footer class='footerSP'>
+            <div class="section">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center pt-3">
+                        <p class="footerH6">© SoftPaper. 2022 Derechos Reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN FOOTER DE LA PAGINA -->
+    </div>
+    <!-- INICIO MODAL AGREGAR COLORES-->
+    <div class="modal modal-agregar modal-agregarCo fade" id="modal-agregarCo" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-center justify-content-center">
+                    <h2 class="modal-title mt-0 fw-bold" id="modal-colores-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <form method="post" id="agregar-color" autocomplete="off">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="hidden" id="id" name="id">
+                                </div>
+                            </div>
+                            <div class="row agregar-content">
+                                <div class="col">
+                                    <div class="row justify-content-center">
+                                        <div class="col my-4">
+                                            <label for="validationDefault02" class="form-label py-2">Nombre del
+                                                color:</label>
+                                            <input class="form-control input-ep" type="text"
+                                                aria-label=".form-control example" id="nombre_color" name="nombre_color"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button class="btn btn-guardar" type="submit" form="agregar-color">Guardar</button>
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL AGREGAR COLORES-->
+
+    <!-- INICIO MODAL DELETE COLORES -->
+    <div class="modal modal-eliminar fade" id="modal-eliminar" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container my-5">
+                        <div class="row">
+                            <div class="col eliminar-content">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <h2>¿Estás seguro?</h2>
+                                <span>El elemento se borrará de manera permanente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex mx-2 justify-content-between">
+                    <button class="btn btn-cancel btn-second" type="button" data-bs-target="" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <form id="delete-form">
+                        <input type="hidden" id="id_delete" name="id_delete">
+                        <input type="hidden" id="num" name="num">
+                        <button class="btn btn-continuar btn-main" type="submit"
+                            data-bs-dismiss="modal">Continuar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL DELETE COLORES-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- DATATABLE JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="../../controllers/componentes.js"></script>
+    <script src="../../controllers/private/online.js"></script>
+    <script src="../../controllers/private/charge.js"></script>
+    <script src="../../controllers/private/color.js"></script>
+    <script src="../../controllers/private/dark_mode.js"></script>
+    <script src="../../resources/js/jscolor.js"></script>
+    <!-- Función para prevenir el uso de comandos para acceder a inspeccionar -->
+    <script src="../../controllers/private/preventinspect.js"></script>
+</body>
+
+</html>
